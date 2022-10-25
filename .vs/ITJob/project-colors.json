@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0613c283-04f3-4049-a182-5c2d507d4c39": {
+      "ProjectGuid": "0613c283-04f3-4049-a182-5c2d507d4c39",
+      "DisplayName": "ITJob.QueryService.Implements",
+      "ColorIndex": 0
+    },
+    "10c90da5-b857-4b72-9204-dc36de282ad7": {
+      "ProjectGuid": "10c90da5-b857-4b72-9204-dc36de282ad7",
+      "DisplayName": "ITJob.ApiService",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

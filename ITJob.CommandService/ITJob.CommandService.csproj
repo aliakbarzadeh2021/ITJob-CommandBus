@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40E83931-AF2C-412C-8DD9-575525419D2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITJob.CommandService</RootNamespace>
+    <AssemblyName>ITJob.CommandService</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="SAF.SSN.Kernel.CommandBus">
+      <HintPath>D:\Projects\ITJob\ITJob Noori\SAF.SSN.Kernel.CommandBus.dll</HintPath>
+    </Reference>
+    <Reference Include="SAF.SSN.Kernel.CommandBus.Messages">
+      <HintPath>D:\Projects\ITJob\ITJob Noori\SAF.SSN.Kernel.CommandBus.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="SAF.SSN.Kernel.Infrastructure, Version=1.0.1.301, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Projects\ITJob\ITJob Noori\SAF.SSN.Kernel.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvertisementModule\AdvertisementCommandService.cs" />
+    <Compile Include="Installer\CommandServiceInstaller.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeedWorks\Exceptions\CommandServiceException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITJob.Commands\ITJob.Commands.csproj">
+      <Project>{6932a515-de3d-4349-ab19-4e41cea1902f}</Project>
+      <Name>ITJob.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.DomainModel\ITJob.DomainModel.csproj">
+      <Project>{7c09d1f6-0187-41ed-a6e8-e7aec54ea2ae}</Project>
+      <Name>ITJob.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.EntityFramework.Write\ITJob.EntityFramework.Write.csproj">
+      <Project>{0AEB129C-A1C9-423D-93A4-741C71953E87}</Project>
+      <Name>ITJob.EntityFramework.Write</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.Repository\ITJob.Repository.csproj">
+      <Project>{222fc03a-3b31-489c-9deb-681295733af4}</Project>
+      <Name>ITJob.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

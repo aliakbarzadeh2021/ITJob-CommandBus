@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ITJob.ApiService" GeneratedClassName="HostSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HostApiAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost:9000</Value>
+    </Setting>
+    <Setting Name="Origins" Type="System.String" Scope="User">
+      <Value Profile="(Default)">*</Value>
+    </Setting>
+    <Setting Name="FileUploadApi" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://192.168.3.204:8080/Service/FileUpload</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD686D68-F21E-4A7D-8BFB-5DEE26D387FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITJob.SecurityService</RootNamespace>
+    <AssemblyName>ITJob.SecurityService</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="SAF.SSN.Kernel.CommandBus.Messages">
+      <HintPath>D:\Projects\ITJob\ITJob Noori\SAF.SSN.Kernel.CommandBus.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="SAF.SSN.Kernel.Infrastructure">
+      <HintPath>D:\Projects\ITJob\ITJob Noori\SAF.SSN.Kernel.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Installer\SecurityServiceInstaller.cs" />
+    <Compile Include="Interfaces\ISecurityCommandService.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ApplicationRoleManager.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\ProfileDto.cs" />
+    <Compile Include="Models\SecurityResponseMessage.cs" />
+    <Compile Include="Models\UserDto.cs" />
+    <Compile Include="Models\UserInfoDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\AuthorizationServerProvider.cs" />
+    <Compile Include="Providers\RefreshTokenProvider.cs" />
+    <Compile Include="Repository\AuthRepository.cs" />
+    <Compile Include="Repository\DbContexts\AuthContext.cs" />
+    <Compile Include="Repository\Entities\Client.cs" />
+    <Compile Include="Repository\Entities\RefreshToken.cs" />
+    <Compile Include="Repository\Migrations\201608160858548_Initial.cs" />
+    <Compile Include="Repository\Migrations\201608160858548_Initial.Designer.cs">
+      <DependentUpon>201608160858548_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\Migrations\201610171154208_sp1.cs" />
+    <Compile Include="Repository\Migrations\201610171154208_sp1.Designer.cs">
+      <DependentUpon>201610171154208_sp1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\Migrations\Configuration.cs" />
+    <Compile Include="Repository\Migrations\Develop\201612210613495_Initial.cs" />
+    <Compile Include="Repository\Migrations\Develop\201612210613495_Initial.Designer.cs">
+      <DependentUpon>201612210613495_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\Migrations\Develop\Configuration.cs" />
+    <Compile Include="Repository\Migrations\PublishHfj\201701081402468_Initial.cs" />
+    <Compile Include="Repository\Migrations\PublishHfj\201701081402468_Initial.Designer.cs">
+      <DependentUpon>201701081402468_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\Migrations\PublishHfj\Configuration.cs" />
+    <Compile Include="SeedWorks\Core\RolesAttribute.cs" />
+    <Compile Include="SeedWorks\Core\SecurityApiControllerBase.cs" />
+    <Compile Include="SeedWorks\Core\SecurityServiceBase.cs" />
+    <Compile Include="SeedWorks\Enums\ApplicationType.cs" />
+    <Compile Include="SeedWorks\Helpers\HashHelper.cs" />
+    <Compile Include="Services\SecurityCommandService.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Repository\Migrations\201608160858548_Initial.resx">
+      <DependentUpon>201608160858548_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repository\Migrations\201610171154208_sp1.resx">
+      <DependentUpon>201610171154208_sp1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repository\Migrations\Develop\201612210613495_Initial.resx">
+      <DependentUpon>201612210613495_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repository\Migrations\PublishHfj\201701081402468_Initial.resx">
+      <DependentUpon>201701081402468_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITJob.Commands\ITJob.Commands.csproj">
+      <Project>{6932a515-de3d-4349-ab19-4e41cea1902f}</Project>
+      <Name>ITJob.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.Infrastructure\ITJob.Infrastructure.csproj">
+      <Project>{26dfb93f-4561-4ab2-96dc-43e5aaeeca0e}</Project>
+      <Name>ITJob.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.QueryModels.Interfaces\ITJob.QueryModels.Interfaces.csproj">
+      <Project>{91ae9ab6-0a47-4be9-b1fc-26d8715d987f}</Project>
+      <Name>ITJob.QueryModels.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
